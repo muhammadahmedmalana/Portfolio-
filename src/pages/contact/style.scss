@@ -1,0 +1,93 @@
+.contact {
+    &__content {
+        padding: 20px;
+
+        h3 {
+            color: var(--text-color);
+            display: inline-block;
+            font-size: 22px;
+            font-weight: 500;
+            border-bottom: 2px solid var(--main-color);
+            position: relative;
+            letter-spacing: 0.5px;
+            padding-bottom: 5px 10px;
+            text-transform: uppercase;
+        }
+
+        &__form {
+            margin-top: 30px;
+
+            &__formWrapper {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                margin-bottom: 30px;
+                gap: 40px;
+
+                div {
+                    display: flex;
+                    flex-direction: column; /* Arrange label and input vertically */
+                    position: relative;
+
+                    .nameInput, .emailInput, .messageInput {
+                        width: 100%;
+                        border: 2px solid var(--main-color);
+                        border-radius: 5px;
+                        padding: 16px 12px;
+                        font-size: 16px;
+                        color: black;
+                        outline: none;
+                        transition: all 0.3s ease;
+                        pointer-events: auto;
+                    }
+
+                    .messageInput {
+                        height: 200px;
+                        padding: 15px;
+                    }
+
+                    .nameLabel, .emailLabel, .messageLabel {
+                        margin-bottom: 5px; /* Space between label and input */
+                        font-size: 16px;
+                        color: var(--text-color);
+                    }
+                }
+            }
+            &__submit {
+                background-color: var(--main-color);
+                color: var(--text-color);
+                border: none;
+                padding: 10px 20px;
+                border-radius: 5px;
+                font-size: 16px;
+                cursor: pointer;
+            }
+        }
+
+    }
+}
+.contact__content__form__status {
+    display: flex;
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .contact__content__form__status.error {
+    color: red;
+  }
+  
+  .contact__content__form__status {
+    color: var(--main-color);
+  }
+  
+@media screen and (max-width: 768px) {
+    .contact__content__form{
+        align-items: center;
+        &__formWrapper{
+            grid-template-columns: repeat(1, 1fr);
+        }
+    }
+
+  
+}
+

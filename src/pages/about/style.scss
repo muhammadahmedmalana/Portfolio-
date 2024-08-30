@@ -1,0 +1,124 @@
+.about{
+   &-content{
+        display: flex;
+        
+        gap: 20px;
+        width: 100%;
+        padding: 20px;
+
+        &-personalDetails , &-servicesDetails{
+            width: 50%;
+          
+
+        }
+        &-personalDetails{
+            h3{
+                font-size: 20px;
+                font-weight: 600;
+                margin-bottom: 10px;
+                color: var(--main-color);
+            }
+            h3.personalDetails-title{
+                margin-top: 20px;
+            }
+            p{
+                color: var(--text-color);
+                font-size: 1.5rem;
+                line-height: 3rem;
+                padding-bottom: 20px;
+                border-bottom: 1px dashed var(--text-color);
+            }
+            ul>li{
+               line-height: 2rem;
+               padding-bottom: 15px;
+              
+              span.title, span.value{
+               font-size: 1.5rem;
+               line-height: 2rem;
+               letter-spacing: 1px;
+               color: var(--text-color);
+               border-bottom: 1px solid var(--main-color);
+               display: inline-block;
+               padding-bottom: 5px;
+               margin-right: 15px;
+            
+              }
+             
+           }
+        }
+        &-servicesDetails{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &-logos{
+                width: 350px;
+                height: 350px;
+                background: radial-gradient(180px, var(--main-color),  transparent 90%);
+                position: relative;
+                border-radius: 50%;
+                border: 1px solid greenyellow;
+                animation: rotation 10s infinite linear;
+
+                div:nth-child(1){
+                    position: absolute;
+                    top: -9%;
+                    left: 40%;
+                }
+                div:nth-child(2){
+                    position: absolute;
+                    right: -8%;
+                    top: 40%;
+                   
+                }
+                div:nth-child(3){
+                    position: absolute;
+                    bottom: -10%;
+                    left: 40%;
+                   
+                }
+                div:nth-child(4){
+                    position: absolute;
+                    left: -8%;
+                    bottom: 40%;
+                   
+                }
+            }
+        }
+
+    }
+}
+
+@keyframes rotation{
+  0%{
+    transform: rotate(0deg);
+  }
+  100%{
+    transform: rotate(360deg);
+  } 
+}
+
+@media  screen and (max-width: 768px){
+    .about-content{
+        flex-direction: column;
+        
+       
+        &-personalDetails , &-servicesDetails{
+            width: 100%;
+            
+        }
+        &-servicesDetails{
+            margin: 10px 0;
+
+            &-logos{
+                width: 300px;
+                height: 300px;
+                background: radial-gradient(130px, var(--main-color),  transparent 110%);
+                
+            }
+
+        }
+       
+    }
+    
+}

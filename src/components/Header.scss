@@ -1,0 +1,22 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px dashed var(--main-color);
+    h2{
+        font-size: 40px;
+        font-weight: bold;
+        color: var(--main-color);
+        margin: 0;
+        letter-spacing: 1.5px;
+        text-transform: uppercase;
+        flex-grow: 1; 
+    }
+    span{
+        svg{
+            color: var(--main-color);
+            font-size: 36px;
+        }
+    }
+
+}

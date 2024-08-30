@@ -1,0 +1,156 @@
+.portfolio {
+    &__content {
+        padding: 20px;
+        width: 100%;
+
+        &__filter {
+            display: inline-flex;
+            border-radius: 25px;
+            margin: 0px auto;
+            border: 1px dashed var(--main-color);
+            li{
+                font-size: 16px;
+                display: inline-block;
+                cursor: pointer;
+                position: relative;
+                color: var(--main-color);
+                text-transform: uppercase;
+                padding: 12px 20px;
+                overflow: hidden;
+                transition: all 0.3s ease;
+
+                &.active{
+                    background-color: var(--main-color);
+                    color: var(--text-color);
+                    border-radius: 30px;
+                    font-weight: 600;
+                }
+               
+                
+
+            }
+        }
+        &__imageCards {
+            margin-top: 25px;
+            display: grid;
+            grid-template-columns: repeat(3,  1fr);
+            grid-template-rows: auto;
+            gap: 20px;
+            justify-content: center;
+            &__item {
+                position: relative;
+                cursor: pointer;
+
+                &:hover .overlay {
+                    opacity: 0.8;
+                    
+                }
+                &__imageWrapper {
+                    position: relative;
+                    width: 100%;
+                    height: 100%;
+                    overflow: hidden;
+                    border-radius: 25px;
+                    a{
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            transition: all 0.3s ease;
+                           
+                        }
+                    }
+                    
+                   
+                  .portfolio__content__imageCards__item__imageWrapper::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    background-color: rgba(0, 0, 0, 0.5);
+                    transition: all 0.3s ease;
+                  }
+
+                }
+                .overlay {
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    right: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    opacity: 0;
+                    border-radius: 25px;
+                    transition: all 0.5s ease;
+                    background-color: var(--main-color);
+                    &__content {
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        text-align: center;
+                        
+                       
+                        h3 {
+                           color: black;
+                           margin: 0px;
+                           position: relative;
+                           overflow: hidden;
+                           white-space: nowrap;
+                           animation: typeEffect 1s steps(30, end) forwards;
+                           font-size: 2rem;
+                        }
+                        button {
+                           margin-top: 16px;
+                           padding: 10px 50px;
+                           font-size: 2rem;
+                           background: transparent;
+                           color: black;
+                           border: 1.5px solid black;
+                           border-radius: 10px;
+                           font-weight: 500;
+                            cursor: pointer;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes typeEffect { 
+    0% { 
+      width: 0; 
+  } 
+   100% { 
+     width: 100%; 
+  } 
+}
+
+@media only screen and (max-width: 500px) {
+    .portfolio__content__filter li {
+        font-size:12px;
+    }
+    .portfolio__content__imageCards{
+        grid-template-columns: repeat(1,1fr);
+        justify-content: center;
+       
+    }
+
+    
+}
+@media only screen and (min-width: 501px) and (max-width: 767px) {
+    .portfolio__content__filter li {
+        font-size:14px;
+    }
+    .portfolio__content__imageCards{
+        grid-template-columns: repeat(2,1fr);
+        justify-content: center;
+       
+    }
+
+    
+}
