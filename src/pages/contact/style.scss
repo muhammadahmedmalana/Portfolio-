@@ -83,6 +83,7 @@
 @media screen and (max-width: 768px) {
     .contact__content__form{
         align-items: center;
+        justify-content: center;
         &__formWrapper{
             grid-template-columns: repeat(1, 1fr);
         }

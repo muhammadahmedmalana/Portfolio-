@@ -5,49 +5,86 @@
   align-items: center;
   height: 100%;
   flex-direction: column;
-  
 }
+
 .home-text {
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
 
-  h1{
-    font-size: 8rem;
-    color: var(--main-color);
-    text-shadow: 0 0 10px var(--main-color);
-    margin: 0;
-    line-height: 10rem;
-    font-weight: 500;
-    overflow: hidden;
-    white-space: nowrap;
-    animation: TypedAnimation 3.5s steps(30, end) ;
-  }
- 
+.home-text h1 {
+  font-size: 8rem;
+  color: var(--main-color);
+  text-shadow: 0 0 10px var(--main-color);
+  margin: 0;
+  line-height: 10rem;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: TypedAnimation 3.5s steps(30, end);
+}
+
+.home-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+
+.home-button button {
+  background: transparent;
+  color: var(--main-color);
+  padding: 10px 70px; /* Default padding */
+  border: 2px solid var(--main-color);
+  font-size: 3rem; /* Default font size */
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+}
+
+.home-button button:hover {
+  background: var(--main-color);
+  color: var(--text-color);
 }
 
 @media only screen and (max-width: 500px) {
-    .home-text h1{
-        font-size: 3rem;
-        line-height: 4rem;
-    }
-    
+  .home-text h1 {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+
+  .home-button button {
+    padding: 8px 30px; /* Adjust padding for smaller screens */
+    font-size: 2rem; /* Adjust font size for smaller screens */
+  }
 }
-@media only screen and (min-width: 500px) and (max-width: 768px) {
-    .home-text h1{
-        font-size: 5rem;
-        line-height: 6rem;
-    }
-    
+
+@media only screen and (min-width: 501px) and (max-width: 768px) {
+  .home-text h1 {
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .home-button button {
+    padding: 10px 40px; /* Adjust padding for medium screens */
+    font-size: 2.5rem; /* Adjust font size for medium screens */
+  }
 }
+
 @media only screen and (min-width: 768px) and (max-width: 990px) {
-    .home-text h1{
-        font-size: 6rem;
-        line-height: 8rem;
-    }
-    
+  .home-text h1 {
+    font-size: 6rem;
+    line-height: 8rem;
+  }
+
+  .home-button button {
+    padding: 12px 50px; /* Adjust padding for larger screens */
+    font-size: 2.5rem; /* Adjust font size for larger screens */
+  }
 }
+
 @keyframes TypedAnimation {
   0% {
     width: 0;
@@ -58,28 +95,4 @@
   100% {
     width: 100%;
   }
-}
-.home-button {
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
- 
-
-button {
-  background: transparent;
-  color: var(--main-color);
-  padding: 10px 70px;
-  border: 2px solid var(--main-color);
-  font-size: 3rem;
-  border-radius: 4px;
-  cursor: pointer;
-  font-weight: 500;
-
-  &:hover {
-    background: var(--main-color);
-    color: var(--text-color);
-    transition: all 0.3s ease-in-out;
-  }
- 
-}
 }

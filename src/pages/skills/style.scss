@@ -1,6 +1,7 @@
 .skills {
     &__content {
        display: flex;
+       justify-content: center;
        padding: 20px;
        gap: 30px;
         
@@ -41,8 +42,10 @@
             .skills{
                  &__content{
                     flex-direction: column;
+                    justify-content: center;
                  }
             }
+            
             .progress-bars{
                 margin-top: 20px;
             }
